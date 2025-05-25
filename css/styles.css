@@ -65,6 +65,8 @@ img {
 /* Header */
 .header-area {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-block {
@@ -97,8 +99,22 @@ img {
 .top-menu-active {
   padding-bottom: 24px;
   padding-top: 24px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.top-menu-active {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+.top-menu-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 4px;
+  background-color: #404bbf;
+  border-radius: 2px;
+  width: 100%;
+}
+
 .top-menu-active:hover {
   color: #404bbf;
 }
@@ -117,16 +133,28 @@ img {
 .top-contact {
   padding-bottom: 24px;
   padding-top: 24px;
+  color: #434455;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.top-contact:hover {
+  color: #404bbf;
 }
 /* /Header */
 
 /* Intro */
 .sections-intro {
+  margin: 0 auto;
   padding: 188px 0;
+  max-width: 1440px;
   background-color: #2e2f42;
-  background-image: linear-gradient(rgba(46, 47, 66, 0.7)),
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
     url(/images/hero-bg.jpg);
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   color: #ffffff;
 }
@@ -154,14 +182,12 @@ img {
   min-width: 169px;
   height: 56px;
   border: none;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .servis-btn:hover,
 .servis-btn:focus {
   background-color: #404bbf;
-  scale: 1.01;
 }
 /* /Intro */
 
@@ -178,11 +204,12 @@ img {
   width: calc((100% - 72px) / 4);
 }
 .advantages-icon {
+  height: 112px;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid #8e8f99;
-  background-color: #e7e9fc;
+  background-color: #f4f4fd;
   border-radius: 4px;
   margin-bottom: 8px;
   padding-bottom: 24px;
@@ -201,7 +228,7 @@ img {
 /* Team */
 .section-team {
   padding: 120px 0;
-  background-color: #e7e9fc;
+  background-color: #f4f4fd;
 }
 
 .head-sect {
@@ -221,6 +248,8 @@ img {
   border-bottom: 1px solid #8e8f99;
   background-color: #ffffff;
   border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-card:hover,
@@ -248,6 +277,9 @@ img {
   justify-content: center;
   gap: 24px;
 }
+.svg-fill {
+  fill: #f4f4fd;
+}
 .social-bg {
   display: flex;
   align-items: center;
@@ -257,13 +289,11 @@ img {
   height: 40px;
   background-color: #4d5ae5;
   border-radius: 100%;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-bg:hover,
 .social-bg:focus {
   background-color: #404bbf;
-  scale: 1.1;
 }
 
 /* Team */
