@@ -96,9 +96,9 @@ img {
   gap: 40px;
 }
 
-.menu-area {
-  padding-bottom: 24px;
-  padding-top: 24px;
+.top-menu-active {
+  padding-bottom: 27px;
+  padding-top: 27px;
 }
 .active {
   color: #404bbf;
@@ -354,20 +354,25 @@ img {
   position: absolute;
   top: 0;
   left: 0;
+
   background-color: #4d5ae5;
   width: 100%;
   height: 100%;
-  color: #ffffff;
-  padding-top: 40px;
-  padding-left: 36px;
-  padding-right: 32px;
-  font-size: 16px;
-  font-weight: 400;
   transform: translateY(100%);
   transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .image-description:hover .description {
   transform: translateY(0);
+}
+.description-text {
+  position: absolute;
+  top: 0;
+  padding: 40px 32px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
 }
 /* /Portfolio */
 
